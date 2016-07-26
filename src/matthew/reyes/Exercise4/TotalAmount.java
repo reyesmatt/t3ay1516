@@ -1,52 +1,26 @@
 package src.matthew.reyes.Exercise4;
 
 /**
- * Created by victorreyes on 28/06/2016.
+ * Created by victorreyes on 26/07/2016.
  */
 public class TotalAmount {
-    private int PONumber;
-    private String UOM;
-    private float quantity;
-    private Item item;
-
-
-    public PurchaseOrder(int PONumber, String UOM, float quantity, Item item) {
-        this.PONumber = PONumber;
-        this.UOM = UOM;
-        this.quantity = quantity;
-        this.item = item;
+    public static void main(String[] args){
+        float sum =0;
+        float total = 0;
+        Item HTC = new Item(1, "Cellphone", "Handheld", 55756.9f);
+        Item Orange = new Item(2, "Oranges", "Food", 58.1f);
+        Item Erasers = new Item(3, "Erasers", "Art Supplies", 15.6f);
+        float [] quantity = {1, 10, 2};
+        String [] UOM1 = {"Pieces", "Pieces", "Pieces"};
+        Item [] itemname = {HTC, Orange, Erasers};
+        PurchaseOrder okay = new PurchaseOrder (1, quantity, UOM1, itemname);
+        for(int i =  0; i < 3; i++)
+        {
+            System.out.print(okay.quantity[i] + " " + okay.UOM[i] + " of ");
+            System.out.println(okay.products[i].getItemDescription()+" = Php "+ okay.quantity[i]*okay.products[i].getPrice());
+            sum = okay.quantity[i] * okay.products[i].getPrice();
+            total = total + sum;
+        }
+        System.out.println("Total Purchase: " + total);
     }
-
-    public int getPONumber() {
-        return PONumber;
-    }
-
-    public void setPONumber(int PONumber) {
-        this.PONumber = PONumber;
-    }
-
-    public Item getItem() {
-        return item;
-    }
-
-    public void setItem(Item item) {
-        this.item = item;
-    }
-
-    public float getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(float quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getUOM() {
-        return UOM;
-    }
-
-    public void setUOM(String UOM) {
-        this.UOM = UOM;
-    }
-
 }

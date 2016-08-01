@@ -11,7 +11,7 @@ public class TotalAmount {
         Item Orange = new Item(2, "Oranges", "Food", 58.1f);
         Item Erasers = new Item(3, "Erasers", "Art Supplies", 15.6f);
         float [] quantity = {1, 10, 2};
-        String [] UOM1 = {"Pieces", "Pieces", "Pieces"};
+        String [] UOM1 = {"Pieces", "Boxes", "Cases"};
         Item [] itemname = {HTC, Orange, Erasers};
         PurchaseOrder okay = new PurchaseOrder (1, quantity, UOM1, itemname);
         for(int i =  0; i < 3; i++)

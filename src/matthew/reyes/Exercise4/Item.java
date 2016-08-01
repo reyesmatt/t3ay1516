@@ -13,6 +13,7 @@ public class Item {
         this.ItemDescription = ItemDescription;
         this.ItemType = ItemType;
         this.Price = Price;
+
     }
 
     public int getItemId() {

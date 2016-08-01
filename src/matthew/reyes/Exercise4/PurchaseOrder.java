@@ -14,6 +14,7 @@ public class PurchaseOrder {
         this.UOM = UOM;
         this.products = products;
 
+
     }
 
     public int getPOnumber() {

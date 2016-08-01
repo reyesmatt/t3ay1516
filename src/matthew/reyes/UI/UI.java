@@ -44,30 +44,28 @@ public class UI extends JFrame {
         primeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int parsedInput = Integer.parseInt(textField1.getText());
-                int maxNumber = parsedInput;
-                String s = "";
-                int x, y;
-                int prime = 0;
-                for (x = 1; x <= maxNumber; ++x) {
-                    prime = x;
-                    for (y = 2; y < x; y++) {
-                        if (x % y == 0) {
-                            prime = 0;
+                int n = Integer.parseInt(textField1.getText());
+                int maxNumber = n;
+                int i = 2;
+                for (i = 2; i <= maxNumber; i++) {
+                    if ((i == 2) || (i % 2 != 0)) {
+                        int prime = i;
+                        for (int j = 2; j <= (1 / 2); j++) {
+                            if (i % j == 0) {
+                                prime = 0;
+                            }
                         }
+                        if (prime != 0)
+                            JOptionPane.showMessageDialog(null,
+                                    "" + prime,
+                                    "Title",
+                                    JOptionPane.INFORMATION_MESSAGE);
                     }
-                    if (prime != 0) {
-                        //System.out.println(prime);
-                        s = s + "\n" + prime;
-                    }
-                    JOptionPane.showMessageDialog(null,
-                            "" + prime,
-                            "Title",
-                            JOptionPane.INFORMATION_MESSAGE);
-                }
 
+                }
             }
         });
+
 
         factorialButton.addActionListener(new ActionListener() {
             @Override
